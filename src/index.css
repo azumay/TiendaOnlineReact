@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.App{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 65%;
+    margin: auto;
+    background-color: white;
+}
+.boxPortatil{
+  width: 30%;
+
+}
+.capProduct{
+  background-color: #7fb8f2;
+  width: 90%;
+margin: auto;
+color: white;
+border-radius: 10px;
 }

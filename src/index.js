@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './component/CuerpoWeb/Content';
 import reportWebVitals from './reportWebVitals';
+import PrimarySearchAppBar from './component/CuerpoWeb/Header';
+import Menu from './component/Menu/Menu';
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <Menu />
     <App />
+    {/* <Articulos /> */} 
   </React.StrictMode>,
   document.getElementById('root')
 );
