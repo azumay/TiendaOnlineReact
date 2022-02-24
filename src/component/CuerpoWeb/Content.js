@@ -3,6 +3,7 @@ import "./../../App.css";
 import { fetchData } from "../helpers/fetch";
 import ProductContext from "./../../context/ProductContext";
 import FilterContext from "./../../context/FilterContext";
+import Aside from "./Aside";
 
 export default function Productos() {
   const { carreto, setCarreto } = useContext(ProductContext);
@@ -25,7 +26,9 @@ useEffect(() => {
 getData();
 }, [filter]);
 return (
-    <div className="App">
+    <div className="boxProductos">
+            <Aside />
+            <div id="cataleg">
       {data &&
         data.length > 0 &&
         data.map((item) => (
@@ -40,9 +43,9 @@ return (
             <p>
               <b> {item.preu} €</b>
             </p>
-           
+            
 
-            <button onClick={()=>{
+            <button class="button-29" role="button" onClick={()=>{
               if(carreto.every((actual)=>actual.pid !==item.pid)){
                 setCarreto([...carreto, item])
               }  
@@ -50,7 +53,7 @@ return (
             
           </article>
         ))}
-        ,
+        </div>
     </div>
   );
 }

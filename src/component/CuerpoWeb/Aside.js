@@ -17,13 +17,13 @@ function Aside() {
       getData();
   }, []);
   return (
-      <div>
+      <div id="box_filtres">
           {
 
               data && Object.entries(data).map((element, i) => {
                   return (
                       <div key={i}>
-                          <h3 key={element[0]}>{element[0]}</h3>
+                          <h3 className="title_filtre" key={element[0]}>{element[0]}</h3>
                           {
                               element[1].map(item => {
                                   return (
