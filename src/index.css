@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,25 +9,58 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.App{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 65%;
-    margin: auto;
-    background-color: white;
+.App {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  background-color: white;
 }
-.boxPortatil{
-  width: 30%;
-
+.boxPortatil {
+  width: 25%;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(207, 203, 202);
+border-radius: 8px;
+margin-bottom: 25px;
+margin-right: 25px;
+box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
 }
-.capProduct{
-  background-color: #7fb8f2;
-  width: 90%;
-margin: auto;
-color: white;
-border-radius: 10px;
+button{
+  padding: 10px;
+  width: 100px;
+  margin-bottom: 10px;
 }
+footer .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px;
+}
+.capProduct {
+  line-height: unset;
+  background-color: #6785c1;
+  width: 100%;
+  margin-top: -20px;
+  color: white;
+  border-radius: 5px 5px 0px 0px;
+ 
+}
+@media (max-width: 905px) {
+  .boxPortatil {
+    width: 35%;
+  }
+  
+}
+@media (max-width: 705px) {
+  .boxPortatil {
+    width: 80%;
+  }}
+  @media (max-width: 375px) {
+    .boxPortatil {
+      width: 100%;
+    }}
