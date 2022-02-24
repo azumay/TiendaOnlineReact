@@ -2,22 +2,29 @@ import React, { useState, useEffect, useContext } from "react";
 import "./../../App.css";
 import { fetchData } from "../helpers/fetch";
 import ProductContext from "./../../context/ProductContext";
-
+import FilterContext from "./../../context/FilterContext";
 
 export default function Productos() {
   const { carreto, setCarreto } = useContext(ProductContext);
+  const {filter, setFilter} = useContext(FilterContext);
   const [data, setData] = useState([]);
   const getData = () => {
-    fetchData("http://localhost/p3cataleg2.php")
-      .then(function (myJson) {
-        console.log(myJson);
+    fetchData("http://localhost/p3cataleg2.php",
+
+    {
+    method: "POST",
+   body: JSON.stringify(filter),
+
+})
+    .then(function (myJson) {
         setData(myJson);
-      });
-  };
-  useEffect(() => {
-    getData();
-  }, []);
-  return (
+    });
+}
+
+useEffect(() => {
+getData();
+}, [filter]);
+return (
     <div className="App">
       {data &&
         data.length > 0 &&
@@ -40,8 +47,10 @@ export default function Productos() {
                 setCarreto([...carreto, item])
               }  
             }}>Comprar</button>
+            
           </article>
         ))}
+        ,
     </div>
   );
 }
