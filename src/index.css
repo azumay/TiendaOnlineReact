@@ -39,6 +39,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   width: 65%;
+  height: max-content;
 }
 #App {
   flex-wrap: wrap;
