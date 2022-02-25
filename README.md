@@ -10,5 +10,16 @@
 2. Node Package Manager 
 <code>npm i</code>
 
+## Configuración ficheros PHP con Base de Datos
+
+Fichero para aplicar en el fetch **content.js** y realizar las consultas a la base de datos:
+<code>public/p3cataleg2.php</code>
+
+Fichero de aplicar en el fetch **aside.js** y realizar los filtros a la base de datos:
+<code>public/p3filtres.php</code>
+
+Script para crear la base de datos con los productos: 
+<code>public/cataleg.sql</code>
+
 ## Vista previa:
 <a href="https://imgur.com/NBKzKuN"><img src="https://i.imgur.com/NBKzKuN.png" title="source: imgur.com" /></a>
