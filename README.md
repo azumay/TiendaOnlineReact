@@ -4,6 +4,9 @@
 2. Instalar iconos MUI: 
   <code> npm i @mui/icons-material</code>
 
+## Para iniciar el proyecto:
+<code>git clone https://github.com/azumay/TiendaOnlineReact.git </code>
+<code>npm i </code>
 
 ## Vista previa:
 <a href="https://imgur.com/NBKzKuN"><img src="https://i.imgur.com/NBKzKuN.png" title="source: imgur.com" /></a>
