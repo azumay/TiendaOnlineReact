@@ -119,6 +119,21 @@ body {
   margin-bottom: 10px;
 }*/
 
+/* ESTILOS CARRITO COMPRA */
+#carrito{
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+.cabecera_cart th {
+  padding: 10px;
+  width: 20%;
+}
+.cabecera_cart {
+  background-color: #516379;
+  color: white;
+}
+
 footer .contenedor {
   display: flex;
   flex-wrap: wrap;

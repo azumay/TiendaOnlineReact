@@ -7,55 +7,58 @@ import Aside from "./Aside";
 
 export default function Productos() {
   const { carreto, setCarreto } = useContext(ProductContext);
-  const {filter, setFilter} = useContext(FilterContext);
+  const { filter, setFilter } = useContext(FilterContext);
   const [data, setData] = useState([]);
   const getData = () => {
-    fetchData("http://localhost/p3cataleg2.php",
+    fetchData(
+      "http://localhost/p3cataleg2.php",
 
-    {
-    method: "POST",
-   body: JSON.stringify(filter),
-
-})
-    .then(function (myJson) {
-        setData(myJson);
+      {
+        method: "POST",
+        body: JSON.stringify(filter),
+      }
+    ).then(function (myJson) {
+      setData(myJson);
     });
-}
+  };
 
-useEffect(() => {
-getData();
-}, [filter]);
-return (
+  useEffect(() => {
+    getData();
+  }, [filter]);
+  return (
     <div className="boxProductos">
-            <Aside />
-            <div id="cataleg">
-      {data &&
-        data.length > 0 &&
-        data.map((item) => (
-          <article key={item.model} className="boxPortatil">
-            <div className="capProduct">
-              <h1>{item.marca}</h1>
-              <p>{item.model}</p>
-             
-            </div>
-            <img src={"pccomp/" + item.imatge} style={{ width: 150 }} />
-            <p>{item.processador}/{item.ram}/{item.emmagatzematge}/{item.polzades}</p>
-            <p>
-              <b> {item.preu} €</b>
-            </p>
-            
+      <Aside />
+      <div id="cataleg">
+        {data && data.length > 0 && data.map((item) => (
+            <article key={item.model} className="boxPortatil">
+              <div className="capProduct">
+                <h1>{item.marca}</h1>
+                <p>{item.model}</p>
+              </div>
+              <img src={"pccomp/" + item.imatge} style={{ width: 150 }} />
+              <p>
+                {item.processador}/{item.ram}/{item.emmagatzematge}/
+                {item.polzades}
+              </p>
+              <p>
+                <b> {item.preu} €</b>
+              </p>
 
-            <button class="button-29" role="button" onClick={()=>{
-              if(carreto.every((actual)=>actual.pid !==item.pid)){
-                setCarreto([...carreto, item])
-              }  
-            }}>Comprar</button>
-            
-          </article>
-        ))}
-        </div>
+              <button
+                class="button-29"
+                role="button"
+                onClick={() => {
+                  if (carreto.every((actual) => actual.pid !== item.pid)) {
+                    item.qty = 1;
+                    setCarreto([...carreto, item]);
+                  }
+                }}
+              >
+                Comprar
+              </button>
+            </article>
+          ))}
+      </div>
     </div>
   );
 }
-
-

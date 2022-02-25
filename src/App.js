@@ -5,7 +5,7 @@ import FilterContext from "./context/FilterContext";
 import Productos from "./component/CuerpoWeb/Content";
 import PrimarySearchAppBar from "./component/CuerpoWeb/Header";
 import PieDePaginagina from "./component/CuerpoWeb/Footer";
-import Aside from "./component/CuerpoWeb/Aside";
+import FullCart from "./component/Cart/FullCart";
 
 function App() {
   const [carreto, setCarreto] = useState([]);
@@ -16,7 +16,7 @@ function App() {
         <div id="App">
           <PrimarySearchAppBar />
           <div id="filtros">
-          
+          <FullCart />
             <Productos />
           </div>
         
