@@ -120,6 +120,24 @@ body {
 }*/
 
 /* ESTILOS CARRITO COMPRA */
+.subtotal{
+  font-size: 18px;
+background-color: #6785c1;
+padding: 10px;
+color: white;
+border-radius: 5px;
+}
+.total{
+  font-weight: 700 !important;
+}
+.qty{
+  padding: 5px;
+  text-align: center;
+  width: 55px;
+  border-radius: 5px;
+  border: 1px solid #516379;
+  font-weight: bold;
+}
 #carrito{
   text-align: center;
   width: 70%;
