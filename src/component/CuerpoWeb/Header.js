@@ -15,6 +15,8 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import BasicModal from './Modal';
+
 
 import ProductContext from "./../../context/ProductContext";
 import { useState, useContext } from "react";
@@ -184,6 +186,7 @@ export default function PrimarySearchAppBar() {
           >
             Amazon
           </Typography>
+         
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -197,7 +200,8 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new cart" color="inherit">
               <Badge badgeContent={carreto.length} color="error">
-                <ShoppingCart />
+                
+                <BasicModal />
               </Badge>
             </IconButton>
            

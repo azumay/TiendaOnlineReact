@@ -16,7 +16,7 @@ function App() {
         <div id="App">
           <PrimarySearchAppBar />
           <div id="filtros">
-          <FullCart />
+       
             <Productos />
           </div>
         

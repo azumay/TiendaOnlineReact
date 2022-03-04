@@ -120,12 +120,32 @@ body {
 }*/
 
 /* ESTILOS CARRITO COMPRA */
+.tiquet{
+  background: url(//cdn.pccomponentes.com/img/fondos/bg-ticket-pago.png) bottom repeat-x;
+margin-bottom: 1rem;
+padding-bottom: 5px;
+border-right: 2px solid #dedede;
+border-left: 2px solid #dedede;
+border-top: 2px solid #dedede;
+  
+}
+.volver{
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .42rem 0.5rem;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+  margin-left: 28px;
+}
 .subtotal{
   font-size: 18px;
-background-color: #6785c1;
-padding: 10px;
-color: white;
-border-radius: 5px;
 }
 .total{
   font-weight: 700 !important;
@@ -140,7 +160,7 @@ border-radius: 5px;
 }
 #carrito{
   text-align: center;
-  width: 70%;
+  width: 95%;
   margin: 0 auto;
 }
 .cabecera_cart th {

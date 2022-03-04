@@ -13,7 +13,9 @@ export default function FullCart() {
     },0);
 
     return (    
+       
         <table id="carrito"> 
+        <h3>Artículo en tu cesta: </h3>
          <tr className="cabecera_cart">
             <th>Ref.</th>
             <th>Imatge</th>
@@ -52,9 +54,9 @@ export default function FullCart() {
            
             
         ))}
-        
+        <div className="tiquet">
             <p className="subtotal">Subtotal  <b className="total">{totalCart}€</b> </p>     
-        
+            </div>
         
 </table>
     );
