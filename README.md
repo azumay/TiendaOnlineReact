@@ -23,3 +23,6 @@ Script para crear la base de datos con los productos:
 
 ## Vista previa:
 <a href="https://imgur.com/NBKzKuN"><img src="https://i.imgur.com/NBKzKuN.png" title="source: imgur.com" /></a>
+
+### Carrito de la compra
+<a href="https://imgur.com/xsdD0LD"><img src="https://i.imgur.com/xsdD0LD.png" title="source: imgur.com" /></a>
