@@ -5,9 +5,12 @@
   <code> npm i @mui/icons-material</code>
 
 ## Para iniciar el proyecto:
-1. Clona el proyecto
+  1. Clona el proyecto
+
 <code>git clone https://github.com/azumay/TiendaOnlineReact.git</code>
-2. Node Package Manager 
+
+  2. Node Package Manager 
+
 <code>npm i</code>
 
 ## Configuración ficheros PHP con Base de Datos
