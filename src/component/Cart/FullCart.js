@@ -39,12 +39,10 @@ export default function FullCart() {
                                 // 1r Cogemos la cantidad de ese producto y le asignamos el nuevo valor
                               setCarreto([...carreto], product.qty =  e.target.value);
                             
-                              // 2n Eliminamos del carrito los elementos con qty = 0
-                                //carreto.filter(product => product.qty(''))
-                                //console.log("algo")
-                                  }}
-                                
-                                
+                              // 2n Eliminamos del carrito los elementos con qty menor a 0
+                                setCarreto( carreto.filter(product => product.qty > 0))
+            
+                                  }}         
                                 
                               /></td> 
                 <td>{product.preu}€</td> 
