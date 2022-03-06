@@ -1,13 +1,17 @@
-import * as React from 'react';
+import React from "react";
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 import FullCart from '../Cart/FullCart';
+
+
+//Modulo PayPal
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+
+
 const style = {
   position: 'absolute',
-  top: '25%',
+  top: '35%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '60%',
@@ -21,6 +25,7 @@ export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
 
   return (
     <div>
@@ -39,8 +44,15 @@ export default function BasicModal() {
             onClick={handleClose}
             >
             Seguir comprando 🛒
+
+         
            
             </button>
+            <div className='paypal' style={{width: "30%" , margin: "0 auto"}}>
+            <PayPalScriptProvider options={{ "client-id": "test" }}>
+            <PayPalButtons style={{ layout: "horizontal", label: "pay", shape: "rect", tagline: false}} />
+            </PayPalScriptProvider>
+            </div>
         </Box>
       </Modal>
     </div>

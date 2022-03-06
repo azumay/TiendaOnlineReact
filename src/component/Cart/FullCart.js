@@ -10,7 +10,7 @@ export default function FullCart() {
 
     const totalCart = carreto.reduce((total, product) =>{
         return total+=parseFloat(product.preu)*product.qty;
-    },0);
+    },0).toFixed(2);
 
     return (    
        
@@ -46,7 +46,7 @@ export default function FullCart() {
                                 
                               /></td> 
                 <td>{product.preu}€</td> 
-                <td>{parseFloat(product.preu * product.qty)}€</td>   
+                <td>{(product.preu * product.qty).toFixed(2)}€</td>   
              
             </tr>
            
