@@ -40,7 +40,7 @@ export default function BasicModal() {
       />
 
       <Modal
-        open={carreto.length===0 ? '' :   open}
+        open={carreto.length!=0 ? open :   ''}
         onClose= {handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
