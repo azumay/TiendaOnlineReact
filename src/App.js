@@ -11,6 +11,7 @@ function App() {
   const [carreto, setCarreto] = useState([]);
   const [filter, setFilter] = useState([]);
   return (
+    
     <ProductContext.Provider value={{ carreto, setCarreto }}>
       <FilterContext.Provider value={{ filter, setFilter }}>
         <div id="App">

@@ -43,8 +43,10 @@ export default function FullCart() {
                                 setCarreto( carreto.filter(product => product.qty > 0))
             
                                   }}         
-                                
-                              /></td> 
+                              />
+                              
+                              
+                              </td> 
                 <td>{product.preu}€</td> 
                 <td>{(product.preu * product.qty).toFixed(2)}€</td>   
              
