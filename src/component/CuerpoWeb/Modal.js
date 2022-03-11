@@ -26,30 +26,41 @@ export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
- 
+  
+  function vaciarCarro (){
+    setCarreto([])
+    handleClose()
+  }
 
   return (
     <div>
 
       <ShoppingCart
         onClick={() => {
-          if (carreto.length !== 0) {
-            handleOpen();
+          if (carreto.length > 0) {
+            setOpen(true);
+          }
+          else{
+            setOpen(false);
           }
         }}
       />
 
       <Modal
-        open={carreto.length!=0 ? open :   ''}
+        open={carreto.length!=0 ? open : false}
         onClose= {handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
           <FullCart />
-          <button class="volver" role="button" onClick={handleClose}>
+          <button className="volver" role="button" onClick={handleClose}>
             Seguir comprando 🛒
           </button>
+          <button className="volver" role="button" onClick={vaciarCarro}>
+            Vaciar
+          </button>
+
           <div className="paypal" style={{ width: "30%", margin: "0 auto" }}>
             <PayPalScriptProvider options={{ "client-id": "test" }}>
               <PayPalButtons

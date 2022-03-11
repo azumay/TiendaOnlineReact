@@ -7,7 +7,8 @@ import PrimarySearchAppBar from "./component/CuerpoWeb/Header";
 import PieDePaginagina from "./component/CuerpoWeb/Footer";
 
 function App() {
-  const [carreto, setCarreto] = useState(JSON.parse(localStorage.getItem('carrito')) || []);
+
+  const [carreto, setCarreto] = useState(JSON.parse(localStorage.getItem('carrito')) || []); //Le paso el localStorage
   const [filter, setFilter] = useState([]);
   
   return (

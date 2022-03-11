@@ -5,52 +5,33 @@ export default function FullCart() {
     // Carregar el context
     const { carreto, setCarreto } = useContext(ProductContext);
     
- 
 
-    //LocalStorage 
-
-    //miLocalStorage.setItem('carrito', JSON.stringify(carreto));
-    
-    /*
-    function cargarCarritoDeLocalStorage () {
-        // ¿Existe un carrito previo guardado en LocalStorage?
-        if (miLocalStorage.getItem('carrito') !== null) {
-            // Carga la información
-            carreto = JSON.parse(miLocalStorage.getItem('carrito'));
-        }
-    }
-    */
-    
-    //guardarCarritoEnLocalStorage();
-    
-    
-    // Calculamos el importe total
 
     const totalCart = carreto.reduce((total, product) =>{
         return total+=parseFloat(product.preu)*product.qty;
     },0).toFixed(2);
     
 
-   
-    // Inicio
-    //cargarCarritoDeLocalStorage();
-
 
     return (    
-       
         <table id="carrito"> 
-        <h3>Artículo en tu cesta: </h3>
-         <tr className="cabecera_cart">
-            <th>Ref.</th>
-            <th>Imatge</th>
-            <th>Descripció</th>
-            <th>Quantitat</th>
-            <th>Preu</th>
-            <th>Import</th>
+            <thead>
+                <tr className="cabecera_cart">
+           
+                <th>Ref.</th>
+                <th>Imatge</th>
+                <th>Descripció</th>
+                <th>Quantitat</th>
+                <th>Preu</th>
+                <th>Import</th>
+           
          </tr>
-        
+        </thead>
+         
+        <tbody>
             {carreto && carreto.length > 0 && carreto.map((product) => ( 
-             <tr>
+             
+             <tr key={product.pid}>
                  
                 <td>{product.pid}</td>
                 <td><img src={"pccomp/" + product.imatge} style={{ width: 50 }} /></td>
@@ -78,14 +59,22 @@ export default function FullCart() {
                 <td>{(product.preu * product.qty).toFixed(2)}€</td>   
              
             </tr>
-           
+         
             
         ))}
-        <div className="tiquet">
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>
+            <div className="tiquet">
             <p className="subtotal">Subtotal  <b className="total">{totalCart}€</b> </p>     
             </div>
+            </th>
+            </tr>
+        </tfoot>
         
 </table>
+
     );
             }
            

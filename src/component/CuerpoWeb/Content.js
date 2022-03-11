@@ -48,7 +48,7 @@ export default function Productos() {
               </p>
 
               <button
-                class="button-29"
+                className="button-29"
                 role="button"
                 onClick={() => {
                   if (carreto.every((actual) => actual.pid !== item.pid)) {
