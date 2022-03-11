@@ -5,14 +5,15 @@ import FilterContext from "./context/FilterContext";
 import Productos from "./component/CuerpoWeb/Content";
 import PrimarySearchAppBar from "./component/CuerpoWeb/Header";
 import PieDePaginagina from "./component/CuerpoWeb/Footer";
-import FullCart from "./component/Cart/FullCart";
 
 function App() {
-  const [carreto, setCarreto] = useState([]);
+  const [carreto, setCarreto] = useState(JSON.parse(localStorage.getItem('carrito')) || []);
   const [filter, setFilter] = useState([]);
+  
   return (
     
     <ProductContext.Provider value={{ carreto, setCarreto }}>
+       
       <FilterContext.Provider value={{ filter, setFilter }}>
         <div id="App">
           <PrimarySearchAppBar />

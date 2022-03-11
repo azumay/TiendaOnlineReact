@@ -8,7 +8,10 @@ import Aside from "./Aside";
 export default function Productos() {
   const { carreto, setCarreto } = useContext(ProductContext);
   const { filter, setFilter } = useContext(FilterContext);
+  const miLocalStorage = window.localStorage;
+
   const [data, setData] = useState([]);
+  miLocalStorage.setItem('carrito', JSON.stringify(carreto));
   const getData = () => {
     fetchData(
       "http://localhost/p3cataleg2.php",
@@ -51,6 +54,7 @@ export default function Productos() {
                   if (carreto.every((actual) => actual.pid !== item.pid)) {
                     item.qty = 1;
                     setCarreto([...carreto, item]);
+                    
                   }
                 }}
               >
