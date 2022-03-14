@@ -5,6 +5,8 @@ import ProductContext from "./../../context/ProductContext";
 import FilterContext from "./../../context/FilterContext";
 import Aside from "./Aside";
 
+import BasicAlerts from '../Alertas/AlertCompra';
+
 export default function Productos() {
   const { carreto, setCarreto } = useContext(ProductContext);
   const { filter, setFilter } = useContext(FilterContext);
@@ -54,6 +56,7 @@ export default function Productos() {
                   if (carreto.every((actual) => actual.pid !== item.pid)) {
                     item.qty = 1;
                     setCarreto([...carreto, item]);
+                    BasicAlerts(item.model);
                     
                   }
                 }}
